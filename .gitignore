@@ -1,2 +1,5 @@
 vEnv
 *.pyc
+*.bkp
+*.log
+*.db-journal

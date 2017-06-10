@@ -17,10 +17,10 @@ for country in json_obj:
     country_url_list = []
     for university in country['universities']:
         new_url_tuple = (
-            university['url'],
-            university['name'],
-            country['code'],
-            country['name']
+            db_handler.sql_escape(university['url']),
+            db_handler.sql_escape(university['name']),
+            db_handler.sql_escape(country['code']),
+            db_handler.sql_escape(country['name'])
         )
         country_url_list.append(new_url_tuple)
     count = count + len(country_url_list)
